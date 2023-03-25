@@ -1,6 +1,8 @@
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/navbar/Navbar'
-import './App.css'
+import { Shop } from './pages/Shop/Shop'
+import { Cart } from './pages/Cart/Cart'
 
 const App=()=>{
   return (
@@ -8,8 +10,8 @@ const App=()=>{
       <Router>
         <Navbar/>
         <Routes>
-          <Route path='/'/>
-          <Route path='/cart'/>
+          <Route path='/'element={<Shop/>}/>
+          <Route path='/cart'element={<Cart/>}/>
         </Routes>
       </Router>
     </div>
